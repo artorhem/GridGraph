@@ -17,8 +17,8 @@ Copyright (c) 2014-2015 Xiaowei Zhu, Tsinghua University
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
-#define CHUNKSIZE 1048576
+#define CHUNKSIZE 1048576 // 1M
 // #define PAGESIZE 4096
-#define IOSIZE 1048576 * 24
+#define IOSIZE 1048576 * 24 // 24M
 
 #endif

@@ -15,8 +15,10 @@ Copyright (c) 2014-2015 Xiaowei Zhu, Tsinghua University
 */
 
 #include "core/graph.hpp"
+#include "core/memcounter.hpp"
 
 int main(int argc, char ** argv) {
+	_flexograph_profile::MemoryCounter memcounter;
 	if (argc<2) {
 		fprintf(stderr, "usage: wcc [path] [memory budget in GB]\n");
 		exit(-1);
