@@ -1,6 +1,6 @@
 
 ROOT_DIR= $(shell pwd)
-TARGETS= bin/preprocess bin/bfs bin/wcc bin/pagerank bin/spmv bin/mis bin/radii
+TARGETS= bin/preprocess bin/bfs bin/wcc bin/pagerank bin/spmv bin/mis bin/radii bin/convert2bin
 
 CXX?= g++
 CXXFLAGS?= -O3 -Wall -std=c++11 -g -fopenmp -I$(ROOT_DIR)
@@ -28,6 +28,9 @@ bin/mis: examples/mis.cpp $(HEADERS)
 
 bin/radii: examples/radii.cpp $(HEADERS)
 	$(CXX) $(CXXFLAGS) -o $@ $< $(SYSLIBS)
+
+bin/convert2bin: tools/convert.cpp
+	$(CXX) $(CXXFLAGS) -o $@ $<
 
 clean:
 	rm -rf $(TARGETS)
